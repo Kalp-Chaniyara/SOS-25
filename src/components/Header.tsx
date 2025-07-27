@@ -62,7 +62,7 @@ export default function Header({ toggleTheme, isDark }: HeaderProps) {
             <div className="w-8 h-8 bg-gradient-neon rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">ML</span>
             </div>
-            <span className="font-bold text-xl neon-text">Summer School</span>
+            <span className="font-bold text-xl neon-text">IEEE</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -170,7 +170,7 @@ export default function Gallery() {
           </motion.div>
 
           {/* View more CTA */}
-          <motion.div variants={itemVariants} className="text-center mt-12">
+          {/* <motion.div variants={itemVariants} className="text-center mt-12">
             <Button
               variant="outline"
               size="lg"
@@ -178,7 +178,7 @@ export default function Gallery() {
             >
               View More Photos
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
 

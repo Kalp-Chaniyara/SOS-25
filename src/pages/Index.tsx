@@ -10,6 +10,8 @@ import Speakers from '@/components/Speakers';
 import Gallery from '@/components/Gallery';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import LiquidBlobInteractive from '@/components/LiquidBlobInteractive';
+import StarfieldBackground from '../components/StarfieldBackground';
 
 const Index = () => {
   const [isDark, setIsDark] = useState(false);
@@ -51,6 +53,9 @@ const Index = () => {
     >
       {/* Fixed header with navigation */}
       <Header toggleTheme={toggleTheme} isDark={isDark} />
+
+      {/* Liquid blob interactive background */}
+      <StarfieldBackground />
 
       {/* Main content sections */}
       <main className="relative">

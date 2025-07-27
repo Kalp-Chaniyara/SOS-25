@@ -1,10 +1,11 @@
 import { Canvas } from '@react-three/fiber';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
 // Minimal rotating cube component
 function RotatingCube() {
-  const meshRef = useRef<any>(null);
+  const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame((state, delta) => {
     if (meshRef.current) {

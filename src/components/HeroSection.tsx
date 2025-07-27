@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Sparkles } from 'lucide-react';
-import Hero3D from './Hero3D';
+import HeroInteractive from './HeroInteractive';
 
 export default function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -14,24 +14,16 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient Background instead of 3D for now */}
-      <div className="absolute inset-0 hero-gradient">
-        {/* Temporarily disabled 3D to isolate error */}
-        {/* <Suspense fallback={<div className="absolute inset-0 bg-gradient-hero" />}>
-          <Hero3D />
-        </Suspense> */}
-      </div>
-
-      {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Interactive animated background */}
+      <HeroInteractive />
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="absolute inset-0 flex items-center justify-center z-10 text-center text-white px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-6 w-full"
         >
           {/* Badge */}
           <motion.div
@@ -96,7 +88,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
@@ -116,7 +108,7 @@ export default function HeroSection() {
             </div>
             <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
