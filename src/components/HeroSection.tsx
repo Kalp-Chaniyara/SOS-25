@@ -14,11 +14,12 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Background Scene */}
+      {/* Gradient Background instead of 3D for now */}
       <div className="absolute inset-0 hero-gradient">
-        <Suspense fallback={<div className="absolute inset-0 bg-gradient-hero" />}>
+        {/* Temporarily disabled 3D to isolate error */}
+        {/* <Suspense fallback={<div className="absolute inset-0 bg-gradient-hero" />}>
           <Hero3D />
-        </Suspense>
+        </Suspense> */}
       </div>
 
       {/* Gradient overlay for better text readability */}
