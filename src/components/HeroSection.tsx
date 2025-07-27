@@ -5,10 +5,10 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 import Hero3D from './Hero3D';
 
 export default function HeroSection() {
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector('#about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -41,7 +41,7 @@ export default function HeroSection() {
             className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20"
           >
             <Sparkles className="w-4 h-4 text-secondary" />
-            <span className="text-sm font-medium">Next-Gen Web Experience</span>
+            <span className="text-sm font-medium">Machine Learning and Neural Networks</span>
           </motion.div>
 
           {/* Main heading */}
@@ -51,9 +51,10 @@ export default function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
           >
-            Welcome to{' '}
+            <span className="text-6xl md:text-8xl italic font-light">SUMMER</span>
+            <br />
             <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
-              Innovation
+              SCHOOL
             </span>
           </motion.h1>
 
@@ -64,8 +65,8 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed"
           >
-            Experience the future of web development with stunning 3D interactions,
-            smooth animations, and cutting-edge design systems.
+            Join us for an intensive 4-day workshop covering machine learning fundamentals,
+            neural networks, and real-world AI applications with industry experts.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -78,18 +79,18 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="btn-glow bg-secondary text-secondary-foreground hover:bg-secondary-light px-8 py-6 text-lg font-semibold shadow-secondary"
-              onClick={scrollToAbout}
+              onClick={() => scrollToSection('#registration-details')}
             >
-              Explore Now
+              Register Now
             </Button>
             
             <Button
               variant="outline"
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm"
-              onClick={() => window.open('#contact', '_self')}
+              onClick={() => scrollToSection('#event-schedule')}
             >
-              Get In Touch
+              View Schedule
             </Button>
           </motion.div>
         </motion.div>
@@ -102,10 +103,10 @@ export default function HeroSection() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <button
-            onClick={scrollToAbout}
+            onClick={() => scrollToSection('#about')}
             className="flex flex-col items-center space-y-2 text-white/70 hover:text-white transition-colors group"
           >
-            <span className="text-sm font-medium">Scroll to discover</span>
+            <span className="text-sm font-medium">Learn more</span>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <motion.div
                 animate={{ y: [0, 12, 0] }}

@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import EventsSection from '@/components/EventsSection';
-import TeamSection from '@/components/TeamSection';
+import CountdownTimer from '@/components/CountdownTimer';
+import EventSchedule from '@/components/EventSchedule';
+import RegistrationDetails from '@/components/RegistrationDetails';
+import Speakers from '@/components/Speakers';
+import Gallery from '@/components/Gallery';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -51,20 +54,26 @@ const Index = () => {
 
       {/* Main content sections */}
       <main className="relative">
-        {/* Hero section with 3D elements */}
+        {/* Hero section with Summer School theme */}
         <HeroSection />
 
-        {/* About section */}
+        {/* About section - ML/Neural Networks topics */}
         <AboutSection />
 
-        {/* Events section with flip cards */}
-        <EventsSection />
+        {/* Countdown timer */}
+        <CountdownTimer />
 
-        {/* Team section with profile cards */}
-        <TeamSection />
+        {/* Event schedule with day-wise breakdown */}
+        <EventSchedule />
 
-        {/* Contact section with form */}
-        <ContactSection />
+        {/* Registration details and pricing */}
+        <RegistrationDetails />
+
+        {/* Expert speakers */}
+        <Speakers />
+
+        {/* Photo gallery */}
+        <Gallery />
       </main>
 
       {/* Footer */}

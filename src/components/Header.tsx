@@ -22,12 +22,13 @@ export default function Header({ toggleTheme, isDark }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation items
+  // Navigation items - matching IEEE structure
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Events', href: '#events' },
-    { name: 'Team', href: '#team' },
+    { name: 'Event Schedule', href: '#event-schedule' },
+    { name: 'Registration Details', href: '#registration-details' },
+    { name: 'Speakers', href: '#speakers' },
+    { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -58,10 +59,10 @@ export default function Header({ toggleTheme, isDark }: HeaderProps) {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">3D</span>
+            <div className="w-8 h-8 bg-gradient-neon rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">ML</span>
             </div>
-            <span className="font-bold text-xl gradient-text">TechSite</span>
+            <span className="font-bold text-xl neon-text">Summer School</span>
           </motion.div>
 
           {/* Desktop Navigation */}

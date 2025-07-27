@@ -18,23 +18,27 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
 
-    /* Primary: Indigo #4B0082 */
-    --primary: 269 100% 25.5%;
+    /* Primary: Neon Purple #8B5FBF */
+    --primary: 269 32% 56%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 269 80% 35%;
-    --primary-dark: 269 100% 20%;
+    --primary-light: 269 45% 65%;
+    --primary-dark: 269 32% 45%;
 
-    /* Secondary: Gold #FFD700 */
-    --secondary: 51 100% 50%;
+    /* Secondary: Neon Cyan #00F5FF */
+    --secondary: 184 100% 50%;
     --secondary-foreground: 0 0% 9%;
-    --secondary-light: 51 100% 60%;
-    --secondary-dark: 51 100% 40%;
+    --secondary-light: 184 100% 60%;
+    --secondary-dark: 184 100% 40%;
 
-    /* Accent: Dark Turquoise #00CED1 */
-    --accent: 181 100% 41%;
-    --accent-foreground: 0 0% 98%;
-    --accent-light: 181 100% 51%;
-    --accent-dark: 181 100% 31%;
+    /* Accent: Electric Lime #CCFF00 */
+    --accent: 72 100% 50%;
+    --accent-foreground: 0 0% 9%;
+    --accent-light: 72 100% 60%;
+    --accent-dark: 72 100% 40%;
+
+    /* Neon Pink accent */
+    --neon-pink: 330 100% 70%;
+    --neon-blue: 200 100% 60%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -48,17 +52,20 @@
 
     --radius: 0.75rem;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    /* Neon gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--neon-pink)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--neon-blue)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-neon: linear-gradient(45deg, hsl(var(--neon-pink)), hsl(var(--secondary)), hsl(var(--accent)));
 
-    /* Shadows with theme colors */
-    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-secondary: 0 10px 30px -10px hsl(var(--secondary) / 0.3);
-    --shadow-accent: 0 10px 30px -10px hsl(var(--accent) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
+    /* Neon shadows and glows */
+    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.5);
+    --shadow-secondary: 0 10px 30px -10px hsl(var(--secondary) / 0.5);
+    --shadow-accent: 0 10px 30px -10px hsl(var(--accent) / 0.5);
+    --shadow-glow: 0 0 40px hsl(var(--secondary) / 0.6);
+    --neon-glow: 0 0 20px hsl(var(--secondary)), 0 0 40px hsl(var(--secondary)), 0 0 60px hsl(var(--secondary));
+    --neon-glow-pink: 0 0 20px hsl(var(--neon-pink)), 0 0 40px hsl(var(--neon-pink));
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -228,11 +235,57 @@
     @apply translate-x-[100%];
   }
 
-  /* Animated gradient text */
-  .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Neon themed components */
+  .neon-text {
+    color: hsl(var(--secondary));
+    text-shadow: var(--neon-glow);
+  }
+
+  .neon-border {
+    border: 2px solid hsl(var(--secondary));
+    box-shadow: var(--neon-glow);
+  }
+
+  .neon-card {
+    @apply bg-card/10 backdrop-blur-lg border border-secondary/30 shadow-lg;
+    box-shadow: var(--neon-glow);
+    transition: all 0.3s ease;
+  }
+
+  .neon-card:hover {
+    @apply border-secondary/60;
+    box-shadow: var(--neon-glow), inset 0 0 20px hsl(var(--secondary) / 0.1);
+  }
+
+  /* Timeline styling */
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-secondary/30;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute w-4 h-4 bg-secondary rounded-full -left-2.5 top-0;
+    box-shadow: var(--neon-glow);
+  }
+
+  /* Speaker cards */
+  .speaker-card {
+    @apply relative overflow-hidden rounded-lg bg-card/10 backdrop-blur-lg border border-secondary/30;
+    transition: all 0.3s ease;
+  }
+
+  .speaker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--neon-glow);
+  }
+
+  /* Gallery hover effects */
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg transition-all duration-300;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--neon-glow);
   }
 }
