@@ -206,7 +206,8 @@
 
   .flip-card-front,
   .flip-card-back {
-    @apply absolute w-full h-full backface-hidden;
+    @apply absolute w-full h-full;
+    backface-visibility: hidden;
   }
 
   .flip-card-back {
