@@ -1,0 +1,16 @@
+{
+  "name": "IEEE Summer School - Machine Learning & Neural Networks",
+  "short_name": "IEEE Summer School",
+  "description": "Join IEEE Summer School for an intensive workshop on Machine Learning and Neural Networks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2C1F0A",
+  "theme_color": "#FFD700",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+} 

@@ -1,3 +1,6 @@
+# IEEE Summer School - Machine Learning & Neural Networks
+# Robots.txt for IEEE Summer School website
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +15,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap (if you have one)
+# Sitemap: https://sos-25.vercel.app/sitemap.xml
