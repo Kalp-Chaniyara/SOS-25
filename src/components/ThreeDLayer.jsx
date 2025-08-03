@@ -19,9 +19,9 @@ function WaveGrid({ mouse }) {
           z: 0,
           color:
             Math.random() > 0.66
-              ? '#00FFFF'
+              ? '#FFD700'
               : Math.random() > 0.5
-              ? '#FF00FF'
+              ? '#FFA500'
               : '#fff',
         });
       }

@@ -96,7 +96,7 @@ export default function LiquidBlobInteractive() {
   }, [baseAngles, mouseX, mouseY, isMobile]);
 
   // Gradient hue shift based on mouse X
-  const hue = 320 + (mouseX - 0.5) * 60; // 320 = pink, 180 = turquoise
+  const hue = 45 + (mouseX - 0.5) * 30; // 45 = yellow, 60 = orange
   const gradientId = 'liquid-blob-gradient';
 
   // Glow/blur effect
@@ -112,7 +112,7 @@ export default function LiquidBlobInteractive() {
         height="100vh"
         viewBox="0 0 960 680"
         className="absolute inset-0 w-full h-full"
-        style={{ background: '#0A0F2C' }}
+        style={{ background: '#2C1F0A' }}
         aria-hidden
       >
         <defs>
@@ -141,7 +141,7 @@ export default function LiquidBlobInteractive() {
         />
       </svg>
       {/* Optional: overlay for readability */}
-      <div className="absolute inset-0 bg-[#0A0F2C]/80 pointer-events-none z-10" aria-hidden />
+      <div className="absolute inset-0 bg-[#2C1F0A]/80 pointer-events-none z-10" aria-hidden />
     </div>
   );
 } 

@@ -17,9 +17,9 @@ function throttle(fn, limit) {
 function ParallaxLayers({ mouse, isMobile }) {
   // Layer configs: speed, color, size, opacity
   const layers = [
-    { speed: 0.02, color: 'from-indigo-900 to-blue-900', opacity: 1, blur: 'blur-0', z: 0 },
-    { speed: 0.06, color: 'from-[#00FFFF]/30 to-[#FF00FF]/20', opacity: 0.7, blur: 'blur-2xl', z: 1 },
-    { speed: 0.12, color: 'from-[#FF00FF]/20 to-[#00FFFF]/10', opacity: 0.5, blur: 'blur-3xl', z: 2 },
+    { speed: 0.02, color: 'from-yellow-900 to-amber-900', opacity: 1, blur: 'blur-0', z: 0 },
+    { speed: 0.06, color: 'from-[#FFD700]/30 to-[#FFA500]/20', opacity: 0.7, blur: 'blur-2xl', z: 1 },
+    { speed: 0.12, color: 'from-[#FFA500]/20 to-[#FFD700]/10', opacity: 0.5, blur: 'blur-3xl', z: 2 },
   ];
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none">
@@ -58,7 +58,7 @@ function ParticleTrail({ mouse, isMobile }) {
         x: mouse.clientX,
         y: mouse.clientY,
         id: Math.random(),
-        color: Math.random() > 0.5 ? '#00FFFF' : '#FF00FF',
+        color: Math.random() > 0.5 ? '#FFD700' : '#FFA500',
       },
     ]);
     // Remove old particles
@@ -106,7 +106,7 @@ function Ripple({ ripple, setRipple }) {
             top: ripple.y - ripple.size / 2,
             width: ripple.size,
             height: ripple.size,
-            background: 'radial-gradient(circle, #00FFFF80 0%, #FF00FF00 80%)',
+            background: 'radial-gradient(circle, #FFD70080 0%, #FFA50000 80%)',
             opacity: 0.7,
           }}
           initial={{ scale: 0, opacity: 0.7 }}
@@ -127,20 +127,20 @@ function HeroCard({ mouse, isMobile }) {
   const tiltY = isMobile ? 0 : (mouse.x - 0.5) * 20;
   return (
     <motion.div
-      className="relative w-80 h-80 mx-auto flex items-center justify-center rounded-3xl bg-black/60 shadow-2xl border-4 border-[#00FFFF]/30"
+      className="relative w-80 h-80 mx-auto flex items-center justify-center rounded-3xl bg-black/60 shadow-2xl border-4 border-[#FFD700]/30"
       style={{
-        boxShadow: '0 0 40px #00FFFF80, 0 0 80px #FF00FF40',
+        boxShadow: '0 0 40px #FFD70080, 0 0 80px #FFA50040',
         transform: `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
       }}
       tabIndex={0}
       aria-label="IEEE Summer School Hero Card"
-      whileHover={{ scale: 1.04, boxShadow: '0 0 60px #00FFFF, 0 0 120px #FF00FF60' }}
+      whileHover={{ scale: 1.04, boxShadow: '0 0 60px #FFD700, 0 0 120px #FFA50060' }}
       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
     >
       {/* Neon logo or abstract SVG */}
       {/* <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="50" stroke="#00FFFF" strokeWidth="6" filter="url(#glow)" />
-        <circle cx="60" cy="60" r="30" stroke="#FF00FF" strokeWidth="4" />
+        <circle cx="60" cy="60" r="50" stroke="#FFD700" strokeWidth="6" filter="url(#glow)" />
+        <circle cx="60" cy="60" r="30" stroke="#FFA500" strokeWidth="4" />
         <text x="60" y="68" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#fff" style={{ fontFamily: 'Inter, sans-serif' }}>IEEE</text>
         <defs>
           <filter id="glow" x="-20" y="-20" width="160" height="160">
@@ -212,7 +212,7 @@ export default function HeroInteractive() {
 
   return (
     <section
-      className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-[#1a0033] to-blue-900"
+      className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-900 via-[#8B4513] to-amber-900"
       aria-label="Interactive Hero Section"
     >
       {/* Parallax background */}
@@ -228,12 +228,12 @@ export default function HeroInteractive() {
       {/* Enter Site button */}
       {/* <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30">
         <motion.button
-          className="px-10 py-5 rounded-full bg-black/70 text-white font-extrabold text-2xl shadow-lg border-2 border-[#00FFFF] focus:outline-none focus:ring-4 focus:ring-[#00FFFF]"
-          whileHover={{ scale: 1.1, boxShadow: '0 0 40px #00FFFF, 0 0 80px #FF00FF60' }}
+          className="px-10 py-5 rounded-full bg-black/70 text-white font-extrabold text-2xl shadow-lg border-2 border-[#FFD700] focus:outline-none focus:ring-4 focus:ring-[#FFD700]"
+          whileHover={{ scale: 1.1, boxShadow: '0 0 40px #FFD700, 0 0 80px #FFA50060' }}
           animate={{ scale: [1, 1.05, 1], boxShadow: [
-            '0 0 40px #00FFFF80, 0 0 80px #FF00FF40',
-            '0 0 60px #00FFFF, 0 0 120px #FF00FF60',
-            '0 0 40px #00FFFF80, 0 0 80px #FF00FF40',
+            '0 0 40px #FFD70080, 0 0 80px #FFA50040',
+            '0 0 60px #FFD700, 0 0 120px #FFA50060',
+            '0 0 40px #FFD70080, 0 0 80px #FFA50040',
           ] }}
           transition={{ duration: 2, repeat: Infinity }}
           onClick={handleEnter}

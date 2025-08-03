@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface HeaderProps {
-  toggleTheme: () => void;
-  isDark: boolean;
-}
-
-export default function Header({ toggleTheme, isDark }: HeaderProps) {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -81,22 +76,8 @@ export default function Header({ toggleTheme, isDark }: HeaderProps) {
             ))}
           </nav>
 
-          {/* Theme toggle and mobile menu */}
+          {/* Mobile menu button */}
           <div className="flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full"
-            >
-              {isDark ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button>
-
-            {/* Mobile menu button */}
             <Button
               variant="ghost"
               size="icon"

@@ -3,8 +3,8 @@ import React, { useRef, useEffect } from 'react';
 function randomColor() {
   const r = Math.random();
   if (r < 0.5) return '#fff';
-  if (r < 0.75) return '#00FFFF';
-  return '#FF00FF';
+  if (r < 0.75) return '#FFD700';
+  return '#FFA500';
 }
 
 export default function StarfieldBackground() {
@@ -98,7 +98,7 @@ export default function StarfieldBackground() {
   return (
     <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
       <canvas ref={canvasRef} className="w-full h-full block" />
-      <div className="absolute inset-0 bg-[#0A0F2C]/90 pointer-events-none z-10" aria-hidden />
+      <div className="absolute inset-0 bg-[#2C1F0A]/90 pointer-events-none z-10" aria-hidden />
     </div>
   );
 } 
