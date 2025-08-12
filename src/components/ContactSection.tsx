@@ -24,21 +24,38 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email Us',
-      description: 'hello@techsite.com',
-      action: 'mailto:hello@techsite.com',
+      title: 'Email',
+      description: 'ieee@dau.ac.in',
+      // action: 'mailto:ieee@dau.ac.in',
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      description: '+1 (555) 123-4567',
-      action: 'tel:+15551234567',
+      title: 'Contact Persons',
+      description: (
+        <>
+          Kalp: +91 90541 45155<br />
+          Dhyey: +91 96871 72037
+        </>
+      ),
+      // action: 'tel:+919687172037',
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      description: '123 Tech Street, San Francisco, CA 94105',
-      action: 'https://maps.google.com',
+      title: 'Location',
+      description: (
+        <>
+          DA-IICT, Near Indroda Circle,<br />
+          Gandhinagar, Gujarat 382007<br />
+          <a 
+            href="https://maps.app.goo.gl/maeiM6vUVaKbGJBF9" 
+            target="_blank" 
+            className="text-secondary hover:text-secondary-light underline mt-2 inline-block transition-colors"
+          >
+            View on Google Maps →
+          </a>
+        </>
+      ),
+      action: 'https://goo.gl/maps/9Y5PHkm8gH2bD8r77',
     },
   ];
 
@@ -98,16 +115,16 @@ export default function ContactSection() {
           {/* Section header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Get In{' '}
-              <span className="gradient-text">Touch</span>
+              Contact{' '}
+              <span className="neon-text">Us</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Ready to start your next project? We'd love to hear from you. 
-              Send us a message and we'll respond as soon as possible.
+              Have questions about the ML Bootcamp? Want to know more about registration? 
+              Get in touch with us and we'll be happy to help!
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="max-w-3xl mx-auto">
             {/* Contact info cards */}
             <motion.div variants={itemVariants} className="space-y-6">
               {contactInfo.map((info, index) => (
@@ -118,24 +135,17 @@ export default function ContactSection() {
                 >
                   <Card className="card-hover border-0 bg-card/50 backdrop-blur-sm">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="p-3 rounded-lg bg-primary/10">
-                          <info.icon className="w-6 h-6 text-primary" />
+                      <div className="flex items-center space-x-4">
+                        <div className="p-3 rounded-lg bg-secondary/10">
+                          <info.icon className="w-6 h-6 text-secondary" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-foreground mb-1">
+                          <h3 className="font-semibold text-secondary mb-2">
                             {info.title}
                           </h3>
-                          <p className="text-muted-foreground text-sm mb-2">
+                          <div className="text-muted-foreground text-sm hover:text-secondary transition-colors">
                             {info.description}
-                          </p>
-                          <Button
-                            variant="link"
-                            className="p-0 h-auto text-primary hover:text-primary-dark"
-                            onClick={() => window.open(info.action, '_blank')}
-                          >
-                            Get in touch →
-                          </Button>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
@@ -144,7 +154,7 @@ export default function ContactSection() {
               ))}
 
               {/* Additional info */}
-              <motion.div variants={itemVariants}>
+              {/* <motion.div variants={itemVariants}>
                 <Card className="bg-gradient-accent border-0 text-accent-foreground">
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-2">Quick Response</h3>
@@ -154,11 +164,11 @@ export default function ContactSection() {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Contact form */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
+            {/* <motion.div variants={itemVariants} className="lg:col-span-2">
               <Card className="border-0 bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -231,7 +241,7 @@ export default function ContactSection() {
                   </form>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

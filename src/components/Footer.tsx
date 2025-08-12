@@ -7,31 +7,31 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:hello@techsite.com', label: 'Email' },
+    // { icon: Github, href: 'https://github.com/ieeesb-daiict', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ieee-daiict/', label: 'LinkedIn' },
+    // { icon: Twitter, href: 'https://twitter.com/ieeesb_daiict', label: 'Twitter' },
+    { icon: Mail, href: 'mailto:ieee@dau.ac.in', label: 'Email' },
   ];
 
   const footerLinks = {
-    Company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Our Team', href: '#team' },
-      { name: 'Careers', href: '#' },
+    'Quick Links': [
+      { name: 'About', href: '#about' },
+      { name: 'Schedule', href: '#event-schedule' },
+      { name: 'Register', href: '#registration-details' },
       { name: 'Contact', href: '#contact' },
     ],
-    Services: [
-      { name: 'Web Development', href: '#' },
-      { name: '3D Experiences', href: '#' },
-      { name: 'UI/UX Design', href: '#' },
-      { name: 'Consulting', href: '#' },
+    'Event Info': [
+      // { name: 'Speakers', href: '#speakers' },
+      { name: 'Schedule', href: '#event-schedule' },
+      // { name: 'Gallery', href: '#gallery' },
+      { name: 'Location', href: '#contact' },
     ],
-    Resources: [
-      { name: 'Blog', href: '#' },
-      { name: 'Documentation', href: '#' },
-      { name: 'Help Center', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-    ],
+    // 'Connect': [
+    //   { name: 'IEEE DAIICT', href: 'https://ieee.daiict.ac.in' },
+    //   { name: 'IEEE Region 10', href: 'https://ieeer10.org' },
+    //   { name: 'IEEE', href: 'https://www.ieee.org' },
+    //   { name: 'Contact Us', href: '#contact' },
+    // ],
   };
 
   const scrollToSection = (href: string) => {
@@ -62,14 +62,15 @@ export default function Footer() {
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-primary-foreground font-bold text-sm">3D</span>
+                    <span className="text-primary-foreground font-bold text-sm">ML</span>
                   </div>
-                  <span className="font-bold text-xl gradient-text">TechSite</span>
+                  <span className="font-bold text-xl gradient-text">IEEE DAIICT</span>
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed max-w-md">
-                  Crafting exceptional digital experiences with cutting-edge 3D graphics, 
-                  smooth animations, and thoughtful design. Let's build the future together.
+                  Join us for an immersive journey into AI, ML, and Deep Learning. 
+                  IEEE Student Branch at DAIICT brings you the ultimate learning experience 
+                  through our Bootcamps Machine Learning Edition.
                 </p>
 
                 {/* Social links */}
@@ -129,9 +130,9 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-muted-foreground text-sm flex items-center"
             >
-              © {currentYear} TechSite. Made with{' '}
+              © {currentYear} IEEE Student Branch DAIICT. Made with{' '}
               <Heart className="w-4 h-4 mx-1 text-red-500 fill-current" />
-              using React, Three.js & Tailwind CSS
+              by IEEE Web Team
             </motion.p>
 
             <motion.div
@@ -140,7 +141,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center space-x-4 text-sm text-muted-foreground"
             >
-              <button
+              {/* <button
                 onClick={() => scrollToSection('#')}
                 className="hover:text-primary transition-colors"
               >
@@ -159,7 +160,7 @@ export default function Footer() {
                 className="hover:text-primary transition-colors"
               >
                 Cookie Policy
-              </button>
+              </button> */}
             </motion.div>
           </div>
         </div>

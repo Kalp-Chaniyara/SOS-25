@@ -43,10 +43,10 @@ export default function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
           >
-            <span className="text-6xl md:text-8xl italic font-light">SUMMER</span>
+            <span className="text-6xl md:text-8xl italic font-light">The Ultimate</span>
             <br />
             <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
-              SCHOOL
+              AI | ML | Deep Learning Experience
             </span>
           </motion.h1>
 
@@ -57,8 +57,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed"
           >
-            Join us for an intensive 4-day workshop covering machine learning fundamentals,
-            neural networks, and real-world AI applications with industry experts.
+            Join us for an immersive two-week journey into the fascinating worlds of Artificial Intelligence, Machine Learning, and Deep Learning with IEEE SB DAIICT's Bootcamps Machine Learning Edition.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -68,22 +67,22 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
           >
-            <Button
+            {/* <Button
               size="lg"
               className="btn-glow bg-secondary text-secondary-foreground hover:bg-secondary-light px-8 py-6 text-lg font-semibold shadow-secondary"
-              onClick={() => scrollToSection('#registration-details')}
+              onClick={() => }
             >
               Register Now
-            </Button>
+            </Button> */}
             
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm"
               onClick={() => scrollToSection('#event-schedule')}
             >
               View Schedule
-            </Button>
+            </Button> */}
           </motion.div>
         </motion.div>
 

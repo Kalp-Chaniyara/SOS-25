@@ -11,21 +11,21 @@ export default function AboutSection() {
   const topics = [
     {
       icon: Code,
-      title: "Machine Learning",
-      subtitle: "AI & Computer Science",
-      description: "Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.",
+      title: "IEEE SB DAIICT",
+      subtitle: "Empowering Innovation",
+      description: "The IEEE Student Branch at DAIICT aims to empower students, researchers, and tech enthusiasts by raising awareness about the limitless opportunities in AI-driven technologies while fostering an intellectually stimulating environment.",
     },
     {
       icon: Zap,
-      title: "Neural Networks", 
-      subtitle: "Brain-inspired Computing",
-      description: "Artificial neural networks (ANN) model the neurons in a human brain through multiple layers of connected units or nodes to determine any kinds of relationship exhibited in a provided data set. It is a booming field of technology and the basics of the same would be covered during this workshop.",
+      title: "Expert-led Learning", 
+      subtitle: "Hands-on Experience",
+      description: "Through expert-led lectures, hands-on coding sessions, and real-world project challenges, participants will tackle AI applications across domains such as computer vision, natural language processing, and predictive analytics.",
     },
     {
       icon: Palette,
-      title: "About Summer School",
-      subtitle: "Learning Platform",
-      description: "Summer School Student Branch aims to provide an interactive and informative platform for students to develop professional and technical abilities. Summer School is organised every year bringing in an opportunity for students to explore various domains and evolve their technical skills to turn their summer fruitful.",
+      title: "Comprehensive Program",
+      subtitle: "Two-Week Journey",
+      description: "Week 1 covers MATLAB basics, AI-ML fundamentals, and deep learning theory, while Week 2 focuses on hands-on projects applying these concepts. This program embodies the spirit of curiosity, problem-solving, and futuristic thinking.",
     },
   ];
 

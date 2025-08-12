@@ -11,8 +11,8 @@ export default function CountdownTimer() {
   });
 
   useEffect(() => {
-    // Set target date (June 3, 2024)
-    const targetDate = new Date('2024-06-03T09:00:00').getTime();
+    // Set target date (September 6, 2025)
+    const targetDate = new Date('2025-09-06T09:00:00').getTime();
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -49,7 +49,7 @@ export default function CountdownTimer() {
             className="mb-8"
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              On 3rd - 4th and 10th - 11th June, 2024
+              On September 6-7 and 13-14, 2025
             </h3>
             <p className="text-lg text-secondary font-semibold mb-8">
               Begins in...

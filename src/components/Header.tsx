@@ -22,8 +22,8 @@ export default function Header() {
     { name: 'Home', href: '#home' },
     { name: 'Event Schedule', href: '#event-schedule' },
     { name: 'Registration Details', href: '#registration-details' },
-    { name: 'Speakers', href: '#speakers' },
-    { name: 'Gallery', href: '#gallery' },
+    // { name: 'Speakers', href: '#speakers' },
+    // { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
 

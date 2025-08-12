@@ -11,57 +11,30 @@ export default function EventSchedule() {
 
   const schedule = [
     {
-      day: "Day 1",
-      date: "June 3, 2024",
-      title: "Kickstart to Machine Learning",
+      day: "Week 1",
+      date: "September 6-7, 2025",
+      title: "Theory and Fundamentals",
       topics: [
-        "Introduction to practical ML",
-        "Basics of Python and its libraries (NumPy)",
-        "Data Analysis",
-        "Data Visualisation", 
-        "Machine Learning Classification"
+        "MATLAB Fundamentals",
+        "AI-ML Theory",
+        "Deep Learning Concepts",
+        "Neural Network Basics"
       ],
       time: "9:00 AM - 5:00 PM",
-      venue: "Tech Hub Auditorium"
+      venue: "DAIICT Campus"
     },
     {
-      day: "Day 2", 
-      date: "June 4, 2024",
-      title: "ML Models",
+      day: "Week 2",
+      date: "September 13-14, 2025",
+      title: "Hands-on Projects",
       topics: [
-        "Linear Regression",
-        "Gradient Descent Algorithm", 
-        "Logistic Regression",
-        "Clustering (K-nearest neighbours)",
-        "Metrics and introduction to Sklearn libraries"
+        "Computer Vision Projects",
+        "Natural Language Processing",
+        "Predictive Analytics",
+        "Project Presentations"
       ],
       time: "9:00 AM - 5:00 PM",
-      venue: "Tech Hub Auditorium"
-    },
-    {
-      day: "Day 3",
-      date: "June 10, 2024", 
-      title: "Neural Networks",
-      topics: [
-        "Introduction to Neural Networks",
-        "Artificial Neural Networks",
-        "Convolution Neural Networks",
-        "Recurrent Neural Networks"
-      ],
-      time: "9:00 AM - 5:00 PM",
-      venue: "Tech Hub Auditorium"
-    },
-    {
-      day: "Day 4",
-      date: "June 11, 2024",
-      title: "Applications", 
-      topics: [
-        "Applications of Machine Learning",
-        "Applications of Neural Networks",
-        "Recommendation System"
-      ],
-      time: "9:00 AM - 5:00 PM",
-      venue: "Tech Hub Auditorium"
+      venue: "DAIICT Campus"
     }
   ];
 

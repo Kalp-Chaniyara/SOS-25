@@ -51,10 +51,13 @@ const Index = () => {
         <RegistrationDetails />
 
         {/* Expert speakers */}
-        <Speakers />
+        {/* <Speakers /> */}
 
         {/* Photo gallery */}
-        <Gallery />
+        {/* <Gallery /> */}
+
+        {/* Contact section */}
+        <ContactSection />
       </main>
 
       {/* Footer */}

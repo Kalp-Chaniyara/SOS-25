@@ -36,7 +36,7 @@ export default function RegistrationDetails() {
             "Workshop kit",
             "Networking sessions"
           ],
-          popular: true
+          popular: false
         }
       ]
     },
@@ -135,15 +135,7 @@ export default function RegistrationDetails() {
                       transition={{ delay: (categoryIndex * 2 + planIndex) * 0.1 }}
                       className="relative"
                     >
-                      <Card className={`neon-card h-full ${plan.popular ? 'border-accent' : ''}`}>
-                        {plan.popular && (
-                          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                            <Badge className="bg-accent text-accent-foreground font-bold px-4 py-1">
-                              Most Popular
-                            </Badge>
-                          </div>
-                        )}
-                        
+                      <Card className="neon-card h-full">                        
                         <CardContent className="p-6">
                           <div className="text-center mb-6">
                             <h4 className="text-xl font-bold text-foreground mb-2">
@@ -167,12 +159,8 @@ export default function RegistrationDetails() {
                           </ul>
 
                           <Button 
-                            className={`w-full btn-glow ${
-                              plan.popular 
-                                ? 'bg-accent hover:bg-accent-dark text-accent-foreground' 
-                                : 'bg-secondary hover:bg-secondary-dark text-secondary-foreground'
-                            }`}
-                            onClick={() => window.open('https://forms.gle/FwJ4aGyXRofPLTeS9', '_blank')}
+                            className="w-full btn-glow bg-secondary hover:bg-secondary-dark text-secondary-foreground"
+                            onClick={() => window.open('https://forms.gle/XnrmUSqCE5MSo37B9', '_blank')}
                           >
                             <CreditCard className="w-4 h-4 mr-2" />
                             Register Now
@@ -218,7 +206,7 @@ export default function RegistrationDetails() {
                     <Button 
                       variant="outline" 
                       className="neon-border"
-                      onClick={() => window.open('https://forms.gle/FwJ4aGyXRofPLTeS9', '_blank')}
+                      onClick={() => window.open('https://forms.gle/XnrmUSqCE5MSo37B9', '_blank')}
                     >
                       Register Here
                       <ExternalLink className="w-4 h-4 ml-2" />
