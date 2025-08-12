@@ -63,7 +63,7 @@ export default function AboutSection() {
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               About{' '}
-              <span className="neon-text">Summer School</span>
+              <span className="neon-text">Bootcamps</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Machine Learning and Neural Networks - Explore the fundamentals and applications 

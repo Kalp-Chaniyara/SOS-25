@@ -133,7 +133,7 @@ function HeroCard({ mouse, isMobile }) {
         transform: `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
       }}
       tabIndex={0}
-      aria-label="IEEE Summer School Hero Card"
+      aria-label="IEEE Bootcamps Hero Card"
       whileHover={{ scale: 1.04, boxShadow: '0 0 60px #FFD700, 0 0 120px #FFA50060' }}
       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
     >

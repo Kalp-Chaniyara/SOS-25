@@ -133,7 +133,7 @@ export default function ContactSection() {
                   variants={itemVariants}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="card-hover border-0 bg-card/50 backdrop-blur-sm">
+                  <Card className="neon-card border-0 bg-card/50 backdrop-blur-sm hover:shadow-secondary/50 transition-shadow duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 rounded-lg bg-secondary/10">

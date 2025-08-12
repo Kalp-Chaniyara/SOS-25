@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* Main content sections */}
       <main className="relative">
-        {/* Hero section with Summer School theme */}
+        {/* Hero section with Bootcamps theme */}
         <HeroSection />
 
         {/* About section - ML/Neural Networks topics */}

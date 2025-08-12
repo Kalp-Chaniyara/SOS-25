@@ -1,5 +1,5 @@
-# IEEE Summer School - Machine Learning & Neural Networks
-# Robots.txt for IEEE Summer School website
+# IEEE Bootcamps - Machine Learning & Neural Networks
+# Robots.txt for IEEE Bootcamps website
 
 User-agent: Googlebot
 Allow: /
