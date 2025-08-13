@@ -142,8 +142,8 @@ export default function EventSchedule() {
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
                     <Users className="w-8 h-8 text-secondary mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-foreground">50+</div>
-                    <div className="text-sm text-muted-foreground">Participants</div>
+                    <div className="text-2xl font-bold text-foreground">Limited</div>
+                    <div className="text-sm text-muted-foreground">Seats</div>
                   </div>
                   <div>
                     <Clock className="w-8 h-8 text-secondary mx-auto mb-2" />

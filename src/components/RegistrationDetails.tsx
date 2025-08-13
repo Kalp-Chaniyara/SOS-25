@@ -200,8 +200,8 @@ export default function RegistrationDetails() {
                       Limited Seats Available
                     </h4>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Only 50 participants will be selected for this intensive workshop.
-                      Register early to secure your spot!
+                      {/* Only 50 participants will be selected for this intensive workshop. */}
+                      Register now to secure your spot!
                     </p>
                     <Button 
                       variant="outline" 

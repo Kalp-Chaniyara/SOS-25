@@ -109,7 +109,7 @@ export default function AboutSection() {
                     <div className="text-sm text-muted-foreground">Days Workshop</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-secondary mb-2">ML/NN</div>
+                    <div className="text-3xl font-bold text-secondary mb-2">AI/ML/Deep Learning</div>
                     <div className="text-sm text-muted-foreground">Focus Areas</div>
                   </div>
                   <div>
