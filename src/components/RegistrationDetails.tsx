@@ -16,7 +16,7 @@ export default function RegistrationDetails() {
       plans: [
         {
           type: "IEEE Members", 
-          price: "₹400",
+          price: "₹300",
           features: [
             "4-day complete workshop",
             "All study materials",
@@ -28,7 +28,7 @@ export default function RegistrationDetails() {
         },
         {
           type: "Non-IEEE Members",
-          price: "₹500", 
+          price: "₹400", 
           features: [
             "4-day complete workshop",
             "All study materials", 
@@ -45,7 +45,7 @@ export default function RegistrationDetails() {
       plans: [
         {
           type: "IEEE Members",
-          price: "₹600",
+          price: "₹400",
           features: [
             "4-day complete workshop",
             "All study materials",
@@ -58,7 +58,7 @@ export default function RegistrationDetails() {
         },
         {
           type: "Non-IEEE Members", 
-          price: "₹700",
+          price: "₹500",
           features: [
             "4-day complete workshop",
             "All study materials",
