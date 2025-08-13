@@ -10,7 +10,7 @@ export default function Footer() {
     // { icon: Github, href: 'https://github.com/ieeesb-daiict', label: 'GitHub' },
     // { icon: Linkedin, href: 'https://www.linkedin.com/company/ieee-daiict/', label: 'LinkedIn' },
     // { icon: Twitter, href: 'https://twitter.com/ieeesb_daiict', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:ieee@dau.ac.in', label: 'Email' },
+    // { icon: Mail, href: 'mailto:ieee@dau.ac.in', label: 'Email' },
   ];
 
   const footerLinks = {

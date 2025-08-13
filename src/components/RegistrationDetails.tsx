@@ -10,67 +10,13 @@ export default function RegistrationDetails() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const pricingPlans = [
-    {
-      category: "DA-IICT Students",
-      plans: [
-        {
-          type: "IEEE Members", 
-          price: "₹300",
-          features: [
-            "4-day complete workshop",
-            "All study materials",
-            "Certificates",
-            "Workshop kit",
-            "Networking sessions"
-          ],
-          popular: false
-        },
-        {
-          type: "Non-IEEE Members",
-          price: "₹400", 
-          features: [
-            "4-day complete workshop",
-            "All study materials", 
-            "Certificates",
-            "Workshop kit",
-            "Networking sessions"
-          ],
-          popular: false
-        }
-      ]
-    },
-    {
-      category: "Outside DA-IICT",
-      plans: [
-        {
-          type: "IEEE Members",
-          price: "₹400",
-          features: [
-            "4-day complete workshop",
-            "All study materials",
-            "Certificates", 
-            "Workshop kit",
-            "Networking sessions",
-            "Accommodation support"
-          ],
-          popular: false
-        },
-        {
-          type: "Non-IEEE Members", 
-          price: "₹500",
-          features: [
-            "4-day complete workshop",
-            "All study materials",
-            "Certificates",
-            "Workshop kit", 
-            "Networking sessions",
-            "Accommodation support"
-          ],
-          popular: false
-        }
-      ]
-    }
+  const registrationFeatures = [
+    "4-day complete workshop",
+    "All study materials",
+    "Certificates",
+    "Workshop kit",
+    "Networking sessions",
+    // "Accommodation support (for outside participants)"
   ];
 
   const containerVariants = {
@@ -115,64 +61,43 @@ export default function RegistrationDetails() {
             </p>
           </motion.div>
 
-          {/* Pricing grid */}
-          <div className="space-y-12">
-            {pricingPlans.map((category, categoryIndex) => (
-              <motion.div
-                key={category.category}
-                variants={itemVariants}
-                transition={{ delay: categoryIndex * 0.2 }}
-              >
-                <h3 className="text-2xl font-bold text-center mb-8 text-secondary">
-                  {category.category}
-                </h3>
-                
-                <div className="grid md:grid-cols-2 gap-8">
-                  {category.plans.map((plan, planIndex) => (
-                    <motion.div
-                      key={plan.type}
-                      variants={itemVariants}
-                      transition={{ delay: (categoryIndex * 2 + planIndex) * 0.1 }}
-                      className="relative"
-                    >
-                      <Card className="neon-card h-full">                        
-                        <CardContent className="p-6">
-                          <div className="text-center mb-6">
-                            <h4 className="text-xl font-bold text-foreground mb-2">
-                              {plan.type}
-                            </h4>
-                            <div className="text-3xl font-bold text-secondary mb-1">
-                              {plan.price}
-                            </div>
-                            <p className="text-sm text-muted-foreground">
-                              Complete workshop access
-                            </p>
-                          </div>
+          {/* Registration Card */}
+          <div className="max-w-xl mx-auto">
+            <motion.div
+              variants={itemVariants}
+              className="relative"
+            >
+              <Card className="neon-card h-full">                        
+                <CardContent className="p-6">
+                  <div className="text-center mb-6">
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Workshop Registration
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Register for complete workshop access
+                    </p>
+                  </div>
 
-                          <ul className="space-y-3 mb-8">
-                            {plan.features.map((feature, index) => (
-                              <li key={index} className="flex items-start">
-                                <Check className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
-                                <span className="text-sm text-muted-foreground">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
+                  <ul className="space-y-3 mb-8">
+                    {registrationFeatures.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                          <Button 
-                            className="w-full btn-glow bg-secondary hover:bg-secondary-dark text-secondary-foreground"
-                            onClick={() => window.open('https://forms.gle/XnrmUSqCE5MSo37B9', '_blank')}
-                          >
-                            <CreditCard className="w-4 h-4 mr-2" />
-                            Register Now
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                  <Button 
+                    className="w-full btn-glow bg-secondary hover:bg-secondary-dark text-secondary-foreground"
+                    onClick={() => window.open('https://forms.gle/XnrmUSqCE5MSo37B9', '_blank')}
+                  >
+                    <CreditCard className="w-4 h-4 mr-2" />
+                    Register Now
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
 
           {/* Registration info */}
@@ -188,9 +113,10 @@ export default function RegistrationDetails() {
                       <li>• Complete 4-day workshop curriculum</li>
                       <li>• Hands-on coding sessions with industry experts</li>
                       <li>• Workshop materials and datasets</li>
-                      <li>• Official completion certificate</li>
+                      <li>• Official completion certificate from MATLAB</li>
                       <li>• Networking opportunities with peers</li>
                       <li>• Post-workshop support and resources</li>
+                      <li>• Doubt solving session</li>
                     </ul>
                   </div>
                   
