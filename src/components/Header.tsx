@@ -28,12 +28,47 @@ export default function Header() {
   ];
 
   // Smooth scroll function
+  // const scrollToSection = (href: string) => {
+  //   const element = document.querySelector(href);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  //   // setIsMobileMenuOpen(false);
+  //   setTimeout(() => {
+  //       setIsMobileMenuOpen(false);
+  //     }, 1000);
+  // };
+
+  // Smooth scroll function using IntersectionObserver for reliability
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
+    if (!element) return; // Exit if the element doesn't exist
+
+    // 1. Start the smooth scroll
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    // 2. Define what to do when the element is visible
+    const onIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        // As soon as the element is intersecting (visible on screen)
+        if (entry.isIntersecting) {
+          // 3. Close the menu
+          setIsMobileMenuOpen(false);
+          // 4. Stop observing to clean up
+          observer.disconnect();
+        }
+      });
+    };
+
+    // 5. Create the observer with the callback
+    const observer = new IntersectionObserver(onIntersection, {
+      // The threshold determines how much of the element needs to be visible
+      // before the callback is triggered. 0.1 means 10%.
+      threshold: 0.1, 
+    });
+
+    // 6. Tell the observer to start watching the target element
+    observer.observe(element);
   };
 
   return (
